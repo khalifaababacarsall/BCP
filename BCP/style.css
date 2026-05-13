@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+header{
+    background: linear-gradient(145deg,#000,#fff);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+nav.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+/*
+ Ce ci gére le bouton hamburger de l'entête 
+*/
+/* Cache la checkbox réelle */
+.menu-checkbox {
+    display: none;
+  }
+  
+  /* Style de l'icône (le bouton) */
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+  }
+  
+  .hamburger span {
+    
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Pour l'animation */
+  }
+  
+  /* Le menu par défaut (masqué sur mobile) */
+  .menu-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Sorti de l'écran */
+    width: 100%;
+    height: auto;
+    background: rgba(255, 208, 208, 0.782);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  }
+  /*ce ci est le petit footer de mon bouton humberger*/
+  .foot{
+    margin-top: 5px;
+  }
+  /* Style the search box */
+#mySearch {
+    width: 80%;
+    font-size: 12px;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+  }
+  
+  /* Style the navigation menu */
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style the navigation links */
+  #myMenu li a {
+    text-decoration: none;
+    color: black;
+    display: block
+  }
+  
+  #myMenu li a:hover {
+    background-color: #eee;
+  }
+  
+  
+  /* --- LOGIQUE DE BASCULE --- */
+  
+  /* Quand la checkbox est cochée : on affiche le menu */
+  .menu-checkbox:checked ~ .menu-links {
+    right: 0;
+  }
+  
+  /* Animation de l'icône en "X" quand on clique */
+  .menu-checkbox:checked + .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-checkbox:checked + .hamburger span:nth-child(2) {
+    opacity: 0; /* On cache la barre du milieu */
+  }
+  .menu-checkbox:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  /*retour a la norme */
+  /* le style du main*/
+  .slider-container {
+    width: 85%;       /* Largeur de ton slider */
+    max-width: 800px;  /* Optionnel : limite la taille */
+    max-height: 342px;
+    margin: auto;
+    overflow: hidden;  /* Cache tout ce qui dépasse de la "fenêtre" */
+    border-radius: 10px;
+  }
+  
+  .slider-track {
+    display: flex;     /* Aligne les images horizontalement */
+    width: 500%;       /* 5 images (4 + 1 doublon) = 500% */
+    height: 90%;
+    animation: scroll 18s linear infinite; /* Nom, durée, rythme, boucle */
+  }
+  
+  .slider-track img {
+    width: 20%;        /* Chaque image prend 1/5ème de la largeur du track */
+    height: auto;
+  }
+  
+  /* L'animation qui déplace le track */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(0); }       /* Pause sur image 1 */
+    25% { transform: translateX(-20%); }    /* Transition vers image 2 */
+    35% { transform: translateX(-20%); }    /* Pause sur image 2 */
+    50% { transform: translateX(-40%); }    /* Transition vers image 3 */
+    65% { transform: translateX(-40%); }    /* Pause sur image 3 */
+    75% { transform: translateX(-60%); }    /* Transition vers image 4 */
+    85% { transform: translateX(-60%); }    /* Pause sur image 4 */
+    95% { transform: translateX(-80%); }    /* Pause sur image 5 */
+    100% { transform: translateX(-80%); }   /* Retour invisible au début via le doublon */
+  }
+body{
+  font-size: 0.9em;
+}
+main{
+  padding: 2px;
+}
+center{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
+}
+center section{
+  scroll-margin-top: 80px; /* Ajustez selon la hauteur de votre menu */
+  scroll-behavior: smooth; /* Pour que la descente soit fluide et non brusque */
+}
+.rond{
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+}
+#myBtn{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(245, 198, 198, 0.939); /* Set a background color */
+    color: rgb(49, 47, 47); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 12px; /* Some padding */
+    border-radius: 3px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+footer{
+    display: none;
+}
+
+
+/* la partie qui gére la résponsivité*/
+
+/* --- CODE POUR ORDINATEUR (Desktop) --- */
+@media screen and (min-width: 400px) {
+    *{
+        margin: 0;
+        padding: 0; 
+        text-decoration: none;
+    }
+    header{
+        background-color: rgb(182, 182, 182);
+        position: sticky;
+        width: 100%;
+       
+    }
+    /* On cache l'icône hamburger et la checkbox */
+    .hamburger, .menu-checkbox {
+      display: none;
+    }
+  
+    /* On remet le menu dans le flux normal */
+    .menu-links {
+      text-decoration: none;
+      background-color: transparent;
+      position: static;     /* Annule le position: fixed du mobile */
+      display: flex;        /* Aligne les liens horizontalement */
+      flex-direction: row;  /* Force l'alignement en ligne */
+      width: auto;
+      height: auto;
+      box-shadow: none;
+      padding-top: 5px;
+    }
+    .menu-links a{
+        text-decoration: none;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(68, 65, 65, 0.877);
+        color: white;
+
+    }
+    .foot{
+      display: none;
+    }
+    .foot2{
+        display: none;
+    }
+    .menu-links li {
+      margin-left: 20px;    /* Espace entre les liens */
+    }
+    footer{
+        display: block;
+        padding: 40px;
+        background-color: rgba(204, 197, 197, 0.87);
+    }
+    /* ce ci concerne l'image qui défile*/
+    .slider-container {
+      width: 95%;       /* Largeur de ton slider */
+      max-width: 800px;  /* Optionnel : limite la taille */
+      max-height: 372px;
+      margin: auto;
+      overflow: hidden;  /* Cache tout ce qui dépasse de la "fenêtre" */
+      border-radius: 10px;
+    }
+    
+    .slider-track {
+      display: flex;     /* Aligne les images horizontalement */
+      width: 250%;       /* 5 images (4 + 1 doublon) = 500% */
+      height: 100%;
+      animation: scroll 18s linear infinite; /* Nom, durée, rythme, boucle */
+    }
+    
+    .slider-track img {
+      width: 20%;        /* Chaque image prend 1/5ème de la largeur du track */
+      height: auto;
+    }
+    
+    /* L'animation qui déplace le track */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      10% { transform: translateX(0); }       /* Pause sur image 1 */
+      20% { transform: translateX(-20%); }    /* Transition vers image 2 */
+      33% { transform: translateX(-20%); }    /* Pause sur image 2 */
+      40% { transform: translateX(-40%); }    /* Transition vers image 3 */
+      50% { transform: translateX(-40%); }    /* Pause sur image 3 */
+      60% { transform: translateX(-60%); }    /* Transition vers image 4 */
+      70% { transform: translateX(-60%); }    /* Pause sur image 4 */
+      80% { transform: translateX(-80%); }    /* Pause sur image 5 */
+      90% { transform: translateX(-80%); }    /* Pause sur image 5 */
+      100% { transform: translateX(-100%); }   /* Retour invisible au début via le doublon */
+    }
+
+    center section{
+      scroll-margin-top: 80px; /* Ajustez selon la hauteur de votre menu */
+      scroll-behavior: smooth; /* Pour que la descente soit fluide et non brusque */
+  }
+    .rond{
+      width: 30%;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+  
+  /* --- CODE POUR MOBILE (Ce que tu avais déjà) --- */
+  @media screen and (max-width: 269px) {
+    .hamburger {
+      display: flex; /* Affiche le bouton uniquement sur petit écran */
+    }
+    
+    /* ... le reste de ton code mobile ici ... */
+  }
+
+
+
+
+
+.navigation{
+  width: 100%;
+  height: 50px;
+  background: #209cff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 10px;
+}
+.navigation ul{
+  display: flex;
+
+}
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 17.5%;
+  height: 50px;
+  z-index: 1;
+}
+
+
+background-color: rgb(182, 182, 182);
+
+
+
+
