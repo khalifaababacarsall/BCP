@@ -1,2 +1,2 @@
-# BCP.github.io
-ce ci est mon premier site web 
+# bcp
+Ce si est première version de notre site et nous somme ravi de vous accueillir. 

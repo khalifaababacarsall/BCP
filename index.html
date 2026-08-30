@@ -2,86 +2,594 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>la page offielle de BCP</title>
     <link rel="stylesheet" href="style.css">
-
-    <title>La page officielle de BCP</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
+
+<script data-goatcounter="https://bcp.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">BCP</div>
-            
-            <!-- La checkbox qui contrôle l'état -->
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-            
-            <!-- L'icône hamburger -->
-            <label for="menu-toggle" class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          
-            <!-- Les liens du menu -->
-            <ul class="menu-links">
-              <a href="#propos" style="color: white;">A propos</a>
-              <a href="#service" style="color: white;">Services</a>
-              <a href="#contact" style="color: white;">Contact</a>
-            <!--Ce ci est le footer temporaire de mon site-->
-            <p class="foot" style="color: rgb(255, 255, 255);">
-              Nos reseaux sociaux : <br>
-              
-              &copy copyright 2026 / Dakar,Senegal By k-lifa design cliquez ici pour me contacter au:<section>&#128071; <br> <a href="https://wa.me/770327827" style="text-decoration: none;"> <button style="padding: 3px;font-style: italic; cursor: pointer; border: none;">77-032-78-27</button></a></section>
-            </p>
-            </ul>
-          </nav>
-    </header> <br><br><br>
-    <main>
-      <p>
-        <h3 style="text-decoration: underline black;">Bienvenue chez BCP – Business Confection Pro: </h3> 
-        Spécialiste de l'habillement professionnel et scolaire, BCP met son expertise au service de votre quotidien. Nous concevons des tenues où la technicité rencontre le confort, pour accompagner les écoliers dans leurs apprentissages, les soignants dans leurs missions et chaque femme dans sa quête d'élégance pudique. Choisir BCP, c’est opter pour une confection rigoureuse, pensée pour durer.
-      </p>
-        <div class="slider-container">
-          <div class="slider-track">
-            <!-- Tes images -->
-            <img src="1.jpg" alt="Photo 1">
-            <img src="2.jpg" alt="Photo 2">
-            <img src="3.jpg" alt="Photo 3">
-            <img src="4.jpg" alt="Photo 4">
-            <img src="5.jpg" alt="Photo 3">
-              
-            <!-- IMPORTANT : On duplique la première image à la fin pour un effet infini fluide -->
-            <img src="1.jpg" alt="Photo 1">
-          </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">B.C.P</a>
         </div>
-        <span onclick="topFunction()" id="myBtn" title="Go to top" class="home"> &#x1F3E0;</span>
-        <p> <ul>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus tempora aliquid hic minus dolores distinctio ex nobis in quaerat tempore dignissimos, necessitatibus possimus. Aut laboriosam rerum aperiam, perferendis minima 
-            <center><section id="propos">A propos</section></center>
-            Pour quoi choisir BCP: <br>
-            BCP vous offre une large gamme de choix sur de ses produits.Une confection professionnelle, rigoureuse pour une durabilité garantie,des textiles sélectionnés pour leur douceur et leur résistance au temps, BCP s'engage à vous fournir le meilleur rapport qualité-prix du marché.
-            <center><section id="service">Nos Services</section></center>
-            Des tenues conçues pour durer, pensées pour ceux qui font bouger le monde<br> des blouses résistantes aux taches et aux jeux, pour accompagner chaque découverte, faciles à enfiler et à laver : la tenue idéale pour une rentrée sans stress,
-            . Parce que l'apprentissage mérite une tenue impeccable et confortable. <br>
-           <center>  <img src="./2.jpg" alt="2" class="rond">   <img src="./21.jpg" alt="21" class="rond">  </center> <br>
-            BCP vous propose aussi des blouse médicale adaptable pour infirmier et pharmacien. <br>
-            des blouses médicale qui offre une liberté de mouvement totale pour vos journées les plus intenses, des textiles respirants et durables, adaptés aux exigences du milieu médical, alliez technicité et style avec nos coupes modernes pour les professionnels de santé. <br> 
-            <center> <img src="./1.jpg" alt="1" class="rond">   <img src="./12.jpg" alt="12" class="rond">  </center> <br>
-            pour ne pas oublier un savoir-faire imparablr de la confection de hijab avec: Des tissus fluides et légers pour un confort optimal tout au long de la journée,le parfait équilibre entre pudeur, modernité et finitions professionnelles,une sélection de matières nobles pour un tombé parfait en toute circonstance. <br>
-            <center> <img src="./5.jpg" alt="5"class="rond">   <img src="./51.jpg" alt="51" class="rond"> </center> <br>
-            <center><section id="contact">Contactez Nous</section></center>
-           <p style=" background-color:rgb(228, 228, 228); border-radius: 10px; padding-left: 3px;">
-            nous somme située à Yeumbeul route de bounne arret Baye Fall. <br>
-            vous pouvez nous contacter au <b>77-811-88-82</b> ou au <b>78-239-15-14</b>nous serons ravi de vous accueillir. Merci.
-           </p> 
-        </p>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#lookbook">Lookbook</a></li>
+            <li><a href="#savoir-faire">Savoir-Faire</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-    </main>
-    <footer>
-      &copy copyright 2026 / Dakar,Senegal By k-lifa design cliquez ici pour me contacter au <section>&#128073;</section><a href="https://wa.me/770327827" style="text-decoration: none;"> <button style="padding: 3px;font-style: italic; border: none;">77-032-78-27</button></a>
+    <!-- Section Hero / En-tête -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <span class="subtitle">Nouvelle Collection 2026</span>
+            <h1>L'Élégance du Détail & du Sur-Mesure</h1>
+            <p>Découvrez nos créations exclusives et le savoir-faire de nos ateliers de confection.</p>
+            <a href="#collections" class="btn btn-primary">Explorer la Collection</a>
+        </div>
+    </section>
+
+    <!-- Section Collections / Catégories -->
+    <section id="collections" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Collections</h2>
+                <p>Une sélection pensée pour l'élégance, le confort et le style au quotidien.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- Carte 1 -->
+                <div class="card">
+                    <div class="card-img">
+                        <!-- REMPLACER LE LIEN DE L'IMAGE ICI -->
+                        <img src="./exposéed-1.jpg" alt="Tenues Professionnelles">
+                    </div>
+                    <div class="card-body">
+                        <h3>Tenues Professionnelles</h3>
+                        <p>Des coupes soignées et élégantes adaptées au monde de l'entreprise.</p>
+                        <a href="#lookbook" class="card-link">Voir les modèles &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <!-- REMPLACER LE LIEN DE L'IMAGE ICI -->
+                        <img src="./exposée-3.jpg" alt="Confection Sur-Mesure">
+                    </div>
+                    <div class="card-body">
+                        <h3>Confection Sur-Mesure</h3>
+                        <p>Chaque pièce est adaptée selon vos exigences et votre morphologie.</p>
+                        <a href="#lookbook" class="card-link">Voir les modèles &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <!-- REMPLACER LE LIEN DE L'IMAGE ICI -->
+                        <img src="./exposée-4.jpg" alt="Gammes Spécialisées">
+                    </div>
+                    <div class="card-body">
+                        <h3>Gammes Spécialisées</h3>
+                        <p>Vêtements techniques et tenues de travail alliant sécurité et esthétique.</p>
+                        <a href="#lookbook" class="card-link">Voir les modèles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Lookbook Galerie / Filtres -->
+    <section id="lookbook" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lookbook Interactif</h2>
+                <p>Filtrez nos créations et découvrez nos derniers modèles en détail.</p>
+            </div>
+
+            <!-- Filtres -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="femme">Blouses médicales</button>
+                <button class="filter-btn" data-filter="homme">Blouses scolaires</button>
+                <button class="filter-btn" data-filter="pro">Tenus de travail</button>
+                <button class="filter-btn" data-filter="tablier">Tablier</button>
+            </div>
+
+            <!-- Grille de vêtements -->
+            <div class="portfolio-grid">
+                <!-- Article 1 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-1.jpg" alt="Costume Moderne">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des finitions soignées et un tissu résistant pour vous accompagner avec élégance dans votre quotidien professionnel</p>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail 1.jpg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                    <p class="tp">Une confection sur-mesure alliant confort et praticité, parfaitement adaptée aux exigences de votre métier</p>
+                </div>
+                <!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-2.jpg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                    <p class="tp">L'expertise de notre atelier au service de votre image : des coupes impeccables pour une présentation irréprochable.</p>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-4.jpeg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-5.jpeg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-6.jpeg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-10.jpg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                </div><!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-11.jpg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                </div><!-- Article 3 -->
+                <div class="portfolio-item pro">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./travail-12.jpg" alt="Robe Élégante">
+                        <div class="portfolio-overlay">
+                            <h4>Tenues de travail</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Article 4 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-4.jpeg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des coupes impeccables et soignées qui valorisent l'image, la discipline et l'élégance de votre établissement scolaire.</p>
+                </div>
+                <!-- Article 5 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire1.jpeg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des tenues de sport souples et respirantes, offrant une liberté de mouvement totale et une grande résistance pour toutes les activités physiques.</p>
+                </div>
+                <!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire.jpg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des tenues confortables et robustes, spécialement conçues pour accompagner le rythme et l'énergie des élèves tout au long de la journée.</p>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-5.jpeg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-6.jpeg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-7.jpeg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-8.jpg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                </div><!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-9.jpg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                </div><!-- Article 6 -->
+                <div class="portfolio-item homme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./scolaire-10.jpg" alt="Veste Tendance">
+                        <div class="portfolio-overlay">
+                            <h4>Blouses scolaires</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Article 7 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-5.jpg" alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des blouses médicales légères et respirantes, conçues pour assurer une hygiène irréprochable et un confort absolu tout au long de vos gardes.</p>
+                </div>
+                <!-- Article 8 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-3.jpg" alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                    <p class="tp">Un tissu haute performance qui résiste aux lavages à haute température et conserve sa tenue lavage après lavage.</p>
+                </div>
+                <!-- Article 9 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-6.jpeg" alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des blouses de pharmacie aux finitions soignées avec lisérés colorés, alliant aisance de mouvement et présentation irréprochable.</p>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-2.jpg" alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                    <p class="tp">Des ensembles ergonomiques offrant une liberté de mouvement totale, parfaitement adaptés aux exigence des chirurgiens et soignants.</p>
+                </div>
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-4.jpeg" alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                    <p class="tp">Une coupe moderne et fonctionnelle dotée de poches renforcées pour garder vos instruments médicaux toujours à portée de main.</p>
+                </div>
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-1.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                    <p class="tp">Une blouse pharmaceutique élégante et ajustée, idéalement conçue pour refléter le professionnalisme et la rigueur de votre officine auprès des patients.</p>
+                </div>
+
+                <!--per-->
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-7.jpeg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-8.jpeg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-9.jpeg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-10.jpeg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-11.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item femme">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./medicale-12.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--dnr-->
+                <!--per-->
+                <!-- Article 5 -->
+                <div class="portfolio-item tablier">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./tablier-1.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item tablier">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./tablier-2.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item tablier">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./tablier-3.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item tablier">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./tablier-4.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item tablier">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./tablier-5.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="portfolio-item tablier">
+                    <div class="portfolio-img">
+                        <!-- REMPLACER L'IMAGE ICI -->
+                        <img src="./tablier-6.jpg " alt="Tenue Médicale / Pro">
+                        <div class="portfolio-overlay">
+                            <h4>Blouse Médicale </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--dnr-->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Savoir-Faire / Histoire -->
+    <section id="savoir-faire" class="section">
+        <div class="container feature-block">
+            <div class="feature-img">
+                <!-- REMPLACER L'IMAGE ICI -->
+                <img src="./exposée-2.jpg" alt="Atelier de Couture">
+            </div>
+            <div class="feature-text">
+                <span class="subtitle">Qualité & Artisanat</span>
+                <h2>L'Art de la Confection</h2>
+                <p>Chaque vêtement qui sort de notre atelier est le résultat d'un travail minutieux. Nous sélectionnons les plus beaux textiles pour garantir durabilité, confort et élégance.</p>
+                <ul class="feature-list">
+                    <li>✓ Textiles certifiés & haute qualité</li>
+                    <li>✓ Finitions faites à la main</li>
+                    <li>✓ Modèles personnalisables à la demande</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact / Demande de devis -->
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <div class="section-title light">
+                <h2>Contactez Notre Atelier</h2>
+                <p>Vous souhaitez commander, demander un devis ou planifier un rendez-vous ?</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <div class="form-group">
+                        <input type="hidden" name="access_key" value="c3c2fb18-6dda-48c7-b89c-4748734e79ab">
+                        <input type="text" id="name" placeholder="Votre Nom complet" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Votre Adresse Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject">
+                            <option value="devis">Demande de devis sur-mesure</option>
+                            <option value="info">Renseignement sur une collection</option>
+                            <option value="rdv">Prise de rendez-vous atelier</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Envoyer le Message</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Pied de Page -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <p>Vous souhaitez nous rendre visite ? Retrouvez-nous à Yeumbeul sur la Route de Boune, juste au niveau de l'arrêt Baye Fall. Pour toute question ou commande, contactez-nous directement au 77 711 88 82.</p>
+            <p>&copy; 2026  - Tous droits réservés. <br> Les mise à jours arivent bientot</p>
+            <div class="socials">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="https://wa.me/221777118882" target="_blank">WhatsApp</a>
+            </div>
+        </div>
     </footer>
-    <script src="main.js"></script>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
